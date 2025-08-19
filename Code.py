@@ -11,7 +11,7 @@ reverse_emoji_dict={
     v:k for k,v in emoji_dict.items()
 }
 
-print("Emoji Encryption System")
+print("Emoji Encryption System.")
 print("1 Encrypt Text")
 print("2 Decrypt Emoji")
 print("3 Encrypt the file input_text.txt")
@@ -30,7 +30,7 @@ elif choice==2:
     emoji=input("Enter message to decrypt: ")
     text=""
     for emojis in emoji:
-        text+=reverse_emoji_dict[emojis]
+        text+=reverse_emoji_dict.get(emojis," ")
     print(f"Original msg:-{emoji}")
     print(f"Decrypted msg:-{text}")
 
